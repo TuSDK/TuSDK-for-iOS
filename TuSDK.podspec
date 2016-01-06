@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
   s.version             = '2.3.2'
   s.summary             = 'TuSDK for iOS'
   s.homepage            = 'http://tusdk.com/'
-  s.license             = { :type => 'Commercial', :text => '© 2014–2015 Lasque Technology Co., Ltd.' }
+  s.license             = { :type => 'Commercial', :text => '© 2014–2016 Lasque Technology Co., Ltd.' }
   s.author              = { 'TuSDK Team' => 'contact@tusdk.com' }
   s.platform            = :ios, '5.1.1'
   s.source              = { :git => 'https://github.com/TuSDK/TuSDK-for-iOS.git', :tag => '2.3.2' }
