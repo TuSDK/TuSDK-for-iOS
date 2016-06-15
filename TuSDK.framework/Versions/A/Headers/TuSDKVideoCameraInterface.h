@@ -84,7 +84,7 @@ typedef NS_ENUM(NSInteger, lsqCameraState)
  *  @param sampleBuffer 帧采样缓冲
  *  @param rotation     原始图像方向
  */
-- (void)onProcessVideoSampleBuffer:(CMSampleBufferRef)sampleBuffer rotation:(UIImageOrientation)rotation;
+- (void)onProcessVideoSampleBuffer:(CMSampleBufferRef)sampleBuffer rotation:(UIImageOrientation)rotation angle:(float)angle;
 @end
 
 @protocol TuSDKVideoCameraExtendViewInterface;

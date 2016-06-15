@@ -41,6 +41,21 @@
 @end
 
 
+#pragma mark - TuSDKFilterFacePositionProtocol
+/**
+ *  材质协议
+ */
+@protocol TuSDKFilterFacePositionProtocol <NSObject>
+/**
+ *  更新位置
+ *
+ *  @param leftEyePoint  左眼中心
+ *  @param rightEyePoint 右眼中心
+ *  @param mouthPoint    嘴巴中心
+ */
+- (void)setLeftEyePosition:(CGPoint)leftEyePoint rightEye:(CGPoint)rightEyePoint mouth:(CGPoint)mouthPoint;
+@end
+
 #pragma mark - TuSDKFilterArg
 /**
  *  滤镜参数
