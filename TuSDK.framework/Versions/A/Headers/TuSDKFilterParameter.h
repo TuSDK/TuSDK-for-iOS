@@ -49,11 +49,9 @@
 /**
  *  更新位置
  *
- *  @param leftEyePoint  左眼中心
- *  @param rightEyePoint 右眼中心
- *  @param mouthPoint    嘴巴中心
+ *  @param points  特征点坐标
  */
-- (void)setLeftEyePosition:(CGPoint)leftEyePoint rightEye:(CGPoint)rightEyePoint mouth:(CGPoint)mouthPoint;
+- (void)setFaceFeatures:(NSArray<NSValue *> *)points;
 @end
 
 #pragma mark - TuSDKFilterArg
