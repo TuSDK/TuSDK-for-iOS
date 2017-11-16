@@ -1,12 +1,12 @@
 Pod::Spec.new do |s|
   s.name                = 'TuSDK'
-  s.version             = '2.8.4'
+  s.version             = '2.9.0'
   s.summary             = 'TuSDK for iOS'
   s.homepage            = 'http://tusdk.com/'
   s.license             = { :type => 'Commercial', :text => '© 2014–2016 Lasque Technology Co., Ltd.' }
   s.author              = { 'TuSDK Team' => 'contact@tusdk.com' }
   s.platform            = :ios, '6.0'
-  s.source              = { :git => 'https://github.com/TuSDK/TuSDK-for-iOS.git', :tag => '2.8.4' }
+  s.source              = { :git => 'https://github.com/TuSDK/TuSDK-for-iOS.git', :tag => '2.9.0' }
   s.requires_arc        = true
 
   s.subspec 'GPUImage' do |g|
