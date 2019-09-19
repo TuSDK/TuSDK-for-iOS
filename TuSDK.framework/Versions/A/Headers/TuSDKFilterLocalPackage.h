@@ -286,3 +286,20 @@ extern NSString * const lsqNormalFilterCode;
  */
 - (NSString *)jsonAllData;
 @end
+
+
+#pragma mark 本地滤镜组
+
+@interface TuSDKFilterLocalPackage (LocalFilter)
+
+/**
+ 将本地滤镜添加到 Package
+ 
+ @param filePath 本地滤镜组文件路径
+ @param groupFiltersType 滤镜类型, see TuSDKFilterGroup.h 0: 普通滤镜, 1: 特效滤镜, 2: 粒子特效滤镜, 3: 漫画特效滤镜
+ @return true/false
+ @since 3.4.5
+ */
+- (BOOL)addFilterGroupFile:(NSString *)filePath groupFiltersType:(NSUInteger)groupFiltersType;
+
+@end

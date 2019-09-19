@@ -277,6 +277,13 @@
 @end
 
 #pragma mark - TuSDKConfig
+
+// 应用类型
+const static int lsqAppTypeImage = 1;  // 图像编辑
+const static int lsqAppTypeLive  = 64;  // 直播
+const static int lsqAppTypeShortVideo = 128;  // 短视频
+const static int lsqAppTypeVideoEva = 8192;  // 视频融合
+
 /**
  *  Sdk配置
  */
@@ -284,6 +291,7 @@
 
 /**
  appType 标识 SDK 类型 [图像，视频，直播]
+ 1 图像编辑  64 直播 128 短视频 8192 视频融合
  */
 @property (nonatomic) NSNumber *appType;
 

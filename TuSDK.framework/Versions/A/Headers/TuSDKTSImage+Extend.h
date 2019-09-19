@@ -177,6 +177,16 @@
  @return NSDictionary
  */
 - (NSDictionary *)lsqGetBitmapHistRange;
+
+
+/**
+ 图片抗锯齿
+ @since v3.4.5
+ 
+ @return 抗锯齿后的图片
+ */
+- (UIImage *)antiAlias;
+
 @end
 
 #pragma mark - ResizeAndRotate

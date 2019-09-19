@@ -194,7 +194,20 @@
  *  @param option 滤镜配置选项
  */
 - (void)loadFilterThumbWithImageView:(UIImageView *)view option:(TuSDKFilterOption *)option;
+
+
+/**
+ 添加本地滤镜组
+
+ @param filePath 本地滤镜组文件路径
+ @param groupFiltersType 滤镜类型, see TuSDKFilterGroup.h 0: 普通滤镜, 1: 特效滤镜, 2: 粒子特效滤镜, 3: 漫画特效滤镜
+ @return 是否加载成功
+ @since v3.4.5
+ */
+- (BOOL)appendFilterGroupWithFilePath:(NSString *)filePath groupFiltersType:(NSUInteger)groupFiltersType;
+
 @end
+
 #pragma mark - TuSDKFilterExtend
 @interface SLGPUImageFilter(TuSDKFilterExtend)
 - (void)setMatrix4fArray:(GLfloat *)matrix forUniform:(GLint)uniform program:(SLGLProgram *)shaderProgram;

@@ -254,6 +254,20 @@ extern NSString * const lsqFilterSampleExtension;
 + (void)setLogLevel:(lsqLogLevel)level;
 
 /**
+ *  设置文件日志输出级别
+ *
+ *  @param level 日志输出级别 (默认：lsqLogLevelFATAL 不输出)
+ */
++ (void)setFileLogLevel:(lsqLogLevel)level;
+
+/**
+ * 获取日志文件路径
+ *
+ * @return 日志文件路径
+ */
++ (NSString *)fileLogPath;
+
+/**
  *  应用临时目录
  *
  *  @return appTempPath 应用临时目录
