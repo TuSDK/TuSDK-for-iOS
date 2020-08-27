@@ -29,6 +29,11 @@
 @property (nonatomic, readonly) NSArray *groups;
 
 /**
+ *  直播滤镜分组列表
+ */
+@property (nonatomic, readonly) NSArray *liveGroups;
+
+/**
  *  是否已初始化
  */
 @property (nonatomic, readonly) BOOL isInited;

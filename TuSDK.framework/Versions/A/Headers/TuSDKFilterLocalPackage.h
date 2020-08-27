@@ -64,6 +64,11 @@ extern NSString * const lsqNormalFilterCode;
 @property (nonatomic, readonly) NSArray *groups;
 
 /**
+ *  直播滤镜分组列表
+ */
+@property (nonatomic, readonly) NSArray *liveGroups;
+
+/**
  *  是否已初始化
  */
 @property (nonatomic, readonly) BOOL isInited;
@@ -87,7 +92,15 @@ extern NSString * const lsqNormalFilterCode;
  *
  *  @return package 原生滤镜配置
  */
+
 + (instancetype)package;
+/**
+ *  原生滤镜配置
+ *  用于swift包装
+ *  swift只认可的关键字 default、singleton、shared 为前缀声明的单例方法名
+ *  @return 原生滤镜配置
+ */
++ (instancetype)sharedPackage;
 
 /**
  *  添加本地滤镜包委托
