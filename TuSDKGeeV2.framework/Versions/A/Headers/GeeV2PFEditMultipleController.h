@@ -10,6 +10,7 @@
 
 #pragma mark - GeeV2PFEditMultipleControllerDelegate
 @class GeeV2PFEditMultipleController;
+@class GeeV2TempPathModel;
 
 /**
  *  多功能图像编辑控制器委托
@@ -91,4 +92,8 @@
  *  视图类 (默认:GeeV2PFEditMultipleView, 需要继承 GeeV2PFEditMultipleView)
  */
 @property (nonatomic, strong) Class viewClazz;
+
+
+- (NSMutableArray *)historiesArray;
+
 @end
