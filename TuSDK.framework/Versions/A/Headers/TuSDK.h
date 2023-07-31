@@ -142,6 +142,7 @@
 #import "TuSDKOnlineStickerDownloader.h"
 
 #import "TuSDKGPU2DImageFilter.h"
+#import "TuSDKGPU2DDynamicImageFilter.h"
 #import "TuSDKGPULiveTransitionFilterProtocol.h"
 
 
@@ -155,7 +156,8 @@
 #import "TuSDKSkinMoistWrap.h"
 #import "TuSDKSkinNaturalWrap.h"
 #import "TuSDKScreenKeyingWrap.h"
-
+#import "TuSDKCosmeticSticker.h"
+#import "CosmeticTaskQueue.h"
 /**
  *  SDK版本
  */
@@ -165,6 +167,11 @@ extern NSString * const lsqSDKVersion;
  *  SDK版本代号
  */
 extern NSUInteger const lsqSDKCode;
+
+/**
+ *  SDK打包时间
+ */
+extern NSString * const lsqSDKPackingTime;
 
 /**
  * SDK配置文件 (lsq_tusdk_configs.json)

@@ -41,7 +41,7 @@
 
 @property (nonatomic, assign) NSInteger id;
 
-@property (nonatomic, readonly, weak) TuSDKPFSticker *pfSticker;
+@property (nonatomic, weak) TuSDKPFSticker *pfSticker;
 
 @property (nonatomic, assign) BOOL enabled;
 @property (nonatomic, assign) BOOL isLoading;
@@ -57,7 +57,7 @@
 
 - (void)updateSticker:(TuSDKPFSticker *)newSticker;
 - (TuSDKStickerAnimationItem *)getCurrentTexture;
-
+- (nullable UIImage *)getCurrentImage;
 - (void)playFromFrameIndex:(NSInteger)index;
 - (void)seekToFrameByTime:(CMTime)frameTime;
 

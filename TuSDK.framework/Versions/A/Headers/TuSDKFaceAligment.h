@@ -17,6 +17,9 @@
 @property (nonatomic, readonly, strong) NSArray<NSValue *> *marks;
 @property (nonatomic, strong) NSArray<NSValue *> *orginMarks;
 
+@property (nonatomic, strong) NSArray<NSValue *> *eyeMarks;
+@property (nonatomic, strong) NSArray<NSValue *> *mouthMarks;
+
 @property (nonatomic, assign) CGFloat roll;
 @property (nonatomic, assign) CGFloat yaw;
 @property (nonatomic, assign) CGFloat pitch;

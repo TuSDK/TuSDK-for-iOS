@@ -38,6 +38,23 @@ typedef NS_ENUM(NSUInteger, lsqStickerPositionType)
     /** 唇膏*/
     lsqStickerPosLip = 9,
     
+    /** 眼影 (v4.0)*/
+    CosEyeShadow = 31,
+    /** 眼线 (v4.0)*/
+    CosEyeLine = 32,
+    /** 睫毛 (v4.0)*/
+    CosEyeLash = 33,
+    /** 画眉 (v4.0)*/
+    CosBrows = 34,
+    /** 腮红 (v4.0)*/
+    CosBlush = 35,
+    /** 唇彩 (v4.0)*/
+    CosLipGloss = 36,
+    /** 虹膜 (v4.0)*/
+    CosIris = 37,
+    /** 修容 (v4.0)*/
+    CosFacial = 38,
+    
     /** 全屏显示*/
     lsqStickerPosFullScreen = 100,
     
@@ -91,46 +108,51 @@ typedef NS_ENUM(NSInteger, lsqStickerRenderType)
 @interface TuSDKStickerPositionInfo : NSObject
 
 /** 贴纸模型尺寸*/
-@property (nonatomic, readonly) CGSize modelSize;
+@property (nonatomic) CGSize modelSize;
 
 /** 设计屏幕尺寸*/
-@property (nonatomic, readonly) CGSize designScreenSize;
+@property (nonatomic) CGSize designScreenSize;
 
 /** 贴纸模型类型*/
-@property (nonatomic, readonly) NSUInteger modelType;
+@property (nonatomic) NSUInteger modelType;
 
 /** 贴纸定位类型*/
-@property (nonatomic, readonly) lsqStickerPositionType posType;
+@property (nonatomic) lsqStickerPositionType posType;
 
 /** 贴纸渲染类型*/
-@property (nonatomic, readonly) lsqStickerRenderType renderType;
+@property (nonatomic) lsqStickerRenderType renderType;
 
 /** 宽高比*/
-@property (nonatomic, readonly) CGFloat ratio;
+@property (nonatomic) CGFloat ratio;
 
 /** 贴纸缩放系数*/
-@property (nonatomic, readonly) CGFloat scale;
+@property (nonatomic) CGFloat scale;
 
 /** 与定位参考点的X坐标位移*/
-@property (nonatomic, readonly) CGFloat offsetX;
+@property (nonatomic) CGFloat offsetX;
 
 /** 与定位参考点的Y坐标位移*/
-@property (nonatomic, readonly) CGFloat offsetY;
+@property (nonatomic) CGFloat offsetY;
 
 /** 旋转系数*/
-@property (nonatomic, readonly) CGFloat rotation;
+@property (nonatomic) CGFloat rotation;
 
 /** 每帧持续时间*/
-@property (nonatomic, readonly) NSUInteger frameInterval;
+@property (nonatomic) NSUInteger frameInterval;
 
 /** 播放模式*/
-@property (nonatomic, readonly) lsqStickerLoopMode loopMode;
+@property (nonatomic) lsqStickerLoopMode loopMode;
 
 /** 动画循环起始帧索*/
-@property (nonatomic, readonly) NSUInteger loopStartIndex;
+@property (nonatomic) NSUInteger loopStartIndex;
 
 /** 素材列表*/
 @property (nonatomic) NSArray *resourceList;
+
+/** 归一化 尺寸*/
+@property (nonatomic, assign) CGSize stickerSize;
+
+@property (nonatomic) BOOL isCustom;
 
 /**
  *  初始化
@@ -154,6 +176,8 @@ typedef NS_ENUM(NSInteger, lsqStickerType)
     lsqStickerText = 2,
     /** 智能贴纸*/
     lsqStickerDynamic = 3,
+    /** 美妆贴纸*/
+    lsqStickerCosmetic =4,
 };
 
 /** 贴纸数据对象*/
@@ -180,7 +204,7 @@ typedef NS_ENUM(NSInteger, lsqStickerType)
 @property (nonatomic) CGSize size;
 
 /** 贴纸元素类型*/
-@property (nonatomic, readonly) lsqStickerType type;
+@property (nonatomic) lsqStickerType type;
 
 /** 贴纸图片*/
 @property (nonatomic, retain) UIImage *image;
@@ -189,7 +213,8 @@ typedef NS_ENUM(NSInteger, lsqStickerType)
 @property (nonatomic, retain) NSArray *texts;
 
 /** 贴纸定位信息*/
-@property (nonatomic, readonly) TuSDKStickerPositionInfo *positionInfo;
+@property (nonatomic) TuSDKStickerPositionInfo *positionInfo;
+
 
 /**
  *  贴纸数据对象
@@ -205,6 +230,7 @@ typedef NS_ENUM(NSInteger, lsqStickerType)
  */
 + (instancetype)stickerWithType:(lsqStickerType)type;
 
++ (instancetype)stickerWithImages:(NSArray *)images;
 /**
  *  复制数据
  *

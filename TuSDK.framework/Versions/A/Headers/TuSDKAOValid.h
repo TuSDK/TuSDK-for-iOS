@@ -146,6 +146,9 @@
 /** 美颜级别 */
 - (NSUInteger)beautyLevel;
 
+/** 美妆是否开启 */
+- (BOOL)cosmeticEnabled;
+
 /** 视频录制抹功能是否开启 */
 - (BOOL)videoRecordEnabled;
 

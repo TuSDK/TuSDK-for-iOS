@@ -91,6 +91,12 @@
  */
 @property (nonatomic) NSInteger beautyLevel;
 
+
+/**
+ *  cosmetic
+ */
+@property (nonatomic) BOOL cosmeticEnabled;
+
 /**
  *  userType
  */
