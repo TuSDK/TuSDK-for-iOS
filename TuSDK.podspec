@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
   s.version             = '3.2.8'
   s.summary             = 'TuSDK for iOS'
   s.homepage            = 'https://tutucloud.com/'
-  s.license             = { :type => 'Commercial', :text => '© 2014–2020 TUTUCLOUD Technology Co., Ltd.' }
+  s.license             = { :type => 'Commercial', :text => '© 2014–2023 TUTUCLOUD Technology Co., Ltd.' }
   s.author              = { 'TuSDK Team' => 'support@tusdk.com' }
   s.platform            = :ios, '9.0'
   s.pod_target_xcconfig = { 'VALID_ARCHS[sdk=iphonesimulator*]' => '' }
